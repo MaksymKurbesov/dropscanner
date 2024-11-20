@@ -36,7 +36,7 @@ const MobileFeedbacks = () => {
             <li key={index}>
               <p className={styles["feedback-text"]}>{feedback.text}</p>
               <div className={styles["profile"]}>
-                <Avatar radius="xl" />
+                <Avatar src={feedback.icon} radius="xl" />
                 <div>
                   <p>
                     {feedback.name}
