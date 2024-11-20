@@ -7,11 +7,11 @@ import {
   IconDotsVertical,
   IconChevronRight,
 } from "@tabler/icons-react";
-import { Anchor, Button, LoadingOverlay, Menu, Overlay } from "@mantine/core";
+import { Button, LoadingOverlay, Menu, Overlay } from "@mantine/core";
 import AirdropTabs from "./AirdropTabs/AirdropTabs.jsx";
 import {
   Link,
-  NavLink,
+  redirect,
   ScrollRestoration,
   useNavigate,
   useParams,
@@ -191,8 +191,8 @@ const Address = () => {
   const [hasWallet, setHasWallet] = useState(false);
   const [opened, { open, close }] = useDisclosure(false);
   const [airdrops, setAirdrops] = useState([]);
-  const navigate = useNavigate();
   const windowSize = useWindowSize();
+  const navigate = useNavigate();
 
   const [isOpenLoadOverlay, setIsOpenLoadOverlay] = useState(true);
   const { isVisible, updateIsVisible } = useSignInModal();
@@ -303,7 +303,8 @@ const Address = () => {
                     size={"xs"}
                     onClick={() => {
                       if (user) {
-                        navigate("/dashboard/overview");
+                        // navigate("/dashboard/overview", { replace: true });
+                        window.location.pathname = "/dashboard/overview";
                       } else {
                         updateIsVisible();
                       }

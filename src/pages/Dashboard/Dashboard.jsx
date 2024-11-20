@@ -2,10 +2,10 @@ import styles from "./Dashboard.module.css";
 import { useAuthState } from "../../hooks/userAuthState.js";
 import { auth, userService } from "../../main.jsx";
 import SponsorCarousel from "../../sharedUI/SponsorCarousel/Carousel.jsx";
-import { Badge, Button, LoadingOverlay } from "@mantine/core";
+import {  Button, LoadingOverlay } from "@mantine/core";
 import { IconBrandTelegram, IconRadar2, IconCrown } from "@tabler/icons-react";
 import YourAddresses from "./YourAddresses/YourAddresses.jsx";
-import { ScrollRestoration, useLocation, useNavigate } from "react-router-dom";
+import { ScrollRestoration, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDisclosure } from "@mantine/hooks";
 import PricingModal from "../../sharedUI/PricingModal/PricingModal.jsx";
@@ -16,19 +16,12 @@ import EligibleAirdrops from "./EligibleAirdrops/EligibleAirdrops.jsx";
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
-  const location = useLocation();
   const [opened, { open, close }] = useDisclosure(false);
   const [loadingOverlayIsOpen, setLoadingOverlayIsOpen] = useState(true);
   const { setIsOpen } = useTour();
   const [userFirstLogin, setUserFirstLogin] = useState(false);
   const [userAddresses, setUserAddresses] = useState([]);
   const [userAddressesIsLoading, setUserAddressesIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Обновление данных или другой код, выполняющийся при загрузке
-    console.log("Page reloaded:", location.pathname);
-  }, [location.key]);
-
 
   useEffect(() => {
     if (!user) return;

@@ -24,6 +24,14 @@
     margin-bottom: 15px;
 }
 
+
+.forgot-your-password {
+    margin: 0 auto 15px;
+    text-align: center;
+    font-weight: 700;
+
+}
+
 .auth-button {
     margin-bottom: 40px;
 }

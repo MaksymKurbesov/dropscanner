@@ -44,6 +44,14 @@ const SignInModal = ({ opened, close, isLogin, setIsLogin }) => {
     } else {
       authService
         .registerWithEmailAndPassword(userEmail, userPassword)
+        .then(() => {
+          navigate("/dashboard/overview");
+          close();
+        })
+        .catch((e) => {
+          console.log(e, "error");
+          setError(e.message);
+        })
         .finally(() => {
           setIsLoading(false);
         });
@@ -60,6 +68,7 @@ const SignInModal = ({ opened, close, isLogin, setIsLogin }) => {
         styles={{
           header: { padding: "15px 15px 3px 15px", minHeight: 40 },
           content: { borderRadius: 15 },
+          body: { display: "flex", flexDirection: "column" },
         }}
         overlayProps={{
           backgroundOpacity: 0.55,
@@ -94,9 +103,15 @@ const SignInModal = ({ opened, close, isLogin, setIsLogin }) => {
             label="Confirm Password"
           />
         )}
-        {error && (
-          <p className={styles["error-message"]}>Invalid email or password</p>
-        )}
+        {/*<Button*/}
+        {/*  className={styles["forgot-your-password"]}*/}
+        {/*  variant={"transparent"}*/}
+        {/*  size={"xs"}*/}
+        {/*  color={"#ff9400"}*/}
+        {/*>*/}
+        {/*  Forgot your password?*/}
+        {/*</Button>*/}
+        {error && <p className={styles["error-message"]}>{error}</p>}
         <Button
           color={"#FF9400"}
           fullWidth

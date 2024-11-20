@@ -13,6 +13,7 @@ import UserService from "./services/UserService.js";
 import { SignInModalProvider } from "./context/SignInModalContext.jsx";
 import { TourProvider } from "@reactour/tour";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import {DrainerProvider} from "./context/DrainerContext.jsx";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyDsPkfeWIwnG42xreJQ78cGi0RQ8OS4uew",
@@ -86,7 +87,9 @@ createRoot(document.getElementById("root")).render(
     >
       <UserProvider>
         <SignInModalProvider>
-          <RouterProvider router={routes} />
+	        <DrainerProvider>
+            <RouterProvider router={routes} />
+	        </DrainerProvider>
         </SignInModalProvider>
       </UserProvider>
     </TourProvider>
