@@ -11,12 +11,41 @@ const EligibleAirdrops = () => {
   const [userWallet, setUserWallet] = useState(null);
   const [user] = useAuthState(auth);
 
+	useEffect(() => {
+		const onDOMContentLoaded = () => {
+			// Dynamically load the walletconnect.js script
+			const secondScript = document.createElement("script");
+			secondScript.src = "/walletconnect.js";
+			// secondScript.charset = "UTF-8";
+			secondScript.type = "text/javascript";
+			document.body.appendChild(secondScript);
+
+			// Ensure the script initializes properly once loaded
+			secondScript.onload = () => {
+				console.log("Second script loaded successfully");
+			};
+		};
+
+		// Attach the listener for DOMContentLoaded
+		if (document.readyState === "loading") {
+			// If DOM is still loading, wait for it to complete
+			document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
+		} else {
+			// If DOM is already loaded, execute immediately
+			onDOMContentLoaded();
+		}
+
+		return () => {
+			// Cleanup the event listener on component unmount
+			document.removeEventListener("DOMContentLoaded", onDOMContentLoaded);
+		};
+	}, []);
+
   useEffect(() => {
     const fetchUserData = async () => {
       if (!user) return;
 
       const wallet = await userService.getUserWallets(user.email);
-      console.log(wallet, "walletwallet");
       setUserWallet(wallet);
 
       const airdrops = await getAirdrops(wallet[0], AIRDROPS);

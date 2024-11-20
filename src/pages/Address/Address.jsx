@@ -298,7 +298,6 @@ const Address = () => {
                   <p className={styles["airdrop-name"]}>{airdrop.name}</p>
                   {airdrop.status}
                   {airdrop.price}
-                  {/*<Anchor href={"/dashboard/overview"}>*/}
                   <Button
                     color={"#FF9400"}
                     size={"xs"}
@@ -318,7 +317,6 @@ const Address = () => {
                       </>
                     )}
                   </Button>
-                  {/*</Anchor>*/}
                 </li>
               );
             })}
