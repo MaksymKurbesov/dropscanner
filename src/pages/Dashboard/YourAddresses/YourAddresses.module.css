@@ -1,0 +1,57 @@
+.your-addresses {
+    margin-bottom: 200px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.header h2 {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.header h2 span {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 10px;
+    border-radius: 50%;
+    font-size: 15px;
+    line-height: 1;
+}
+
+
+.addresses-list {
+    position: relative;
+}
+
+.modal input {
+    /*margin-bottom: 20px;*/
+}
+
+.modal a {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: var(--main-orange);
+}
+
+.back-button {
+    margin-right: 15px;
+}
+
+.next-button {
+    margin-top: 15px;
+}
+
+
+

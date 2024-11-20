@@ -1,0 +1,108 @@
+.testimonials {
+    margin-bottom: 80px;
+}
+
+.testimonials h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: #2f2f2f;
+}
+
+.testimonials h2 span {
+    color: var(--main-orange);
+    font-weight: 600;
+}
+
+.subtitle {
+    margin-bottom: 70px;
+    opacity: 0.7;
+}
+
+.feedback-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content max-content max-content;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.testimonials > div > button {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.feedback-list li {
+    box-shadow: var(--card-shadow);
+    border-radius: 15px;
+    padding: 20px;
+    height: max-content;
+}
+
+.feedback-text p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.feedback-text p span {
+    font-weight: 700;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-weight: 600;
+}
+
+.profile p {
+    font-size: 14px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.profile span {
+    font-size: 12px;
+    line-height: 1;
+    color: gray;
+    font-weight: 700;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 800px) {
+    .testimonials {
+        margin-bottom: 0;
+    }
+
+    .feedback-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .subtitle {
+        margin-bottom: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
+    .feedback-list {
+        grid-template-columns: 1fr;
+    }
+
+    .subtitle {
+        margin-bottom: 35px;
+    }
+}

@@ -1,0 +1,28 @@
+.privacy-wrapper {
+    padding-top: 64px;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.privacy {
+    padding-top: 80px;
+}
+
+.privacy h1 {
+    margin-bottom: 20px;
+}
+
+.privacy h2 {
+    margin-bottom: 5px;
+}
+
+.privacy p {
+    margin-bottom: 30px;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.privacy p:last-child {
+    margin-bottom: 100px;
+}

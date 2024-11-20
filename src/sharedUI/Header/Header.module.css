@@ -1,0 +1,112 @@
+.header {
+    font-size: 12px;
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 5;
+    color: white;
+    transition: 0.35s ease all;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.header > div {
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+
+.white-header nav {
+    color: black;
+}
+
+.white-header .logo-link {
+    color: var(--main-orange);
+}
+
+
+.logo {
+    transform: rotateZ(45deg);
+}
+
+.log-in-button {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.dashboard-text {
+    font-size: 12px;
+}
+
+.log-in-button svg {
+    margin-right: 5px;
+}
+
+.nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.nav ul li a {
+    border-bottom: 2px solid transparent;
+}
+
+.scrolled-header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(6px);
+    color: black;
+
+    box-shadow: var(--card-shadow);
+}
+
+.scrolled-header .logo-link {
+    color: var(--main-orange);
+}
+
+.scrolled-header > div img, .white-header > div img {
+    filter:  hue-rotate(165deg) saturate(1000%) brightness(1.7);
+}
+
+
+.scrolled-header .log-in-button, .white-header .log-in-button {
+    color: var(--main-orange);
+}
+
+.active {
+    transition: 0.35s ease all;
+    border-bottom: 2px solid var(--main-orange) !important;
+    color: var(--main-orange);
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav ul li {
+        font-size: 12px;
+    }
+
+    .logo-link span {
+        display: none;
+    }
+}

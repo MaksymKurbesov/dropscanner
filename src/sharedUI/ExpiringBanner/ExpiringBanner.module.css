@@ -1,0 +1,30 @@
+.expiring-banner {
+    /*height: 160px;*/
+    background: linear-gradient(to left bottom, rgb(253, 213, 181), rgb(246, 169, 92) 80%);
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px;
+}
+
+.expiring-banner h2 {
+    font-weight: 600;
+    text-shadow: rgb(217, 140, 40) 0px 2px 12px;
+    line-height: 1.2;
+    font-size: 18px;
+}
+
+.check-button {
+    color: var(--main-orange) !important;
+}
+
+@media screen and (max-width: 600px) {
+    .expiring-banner {
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+}

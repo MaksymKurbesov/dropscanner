@@ -1,0 +1,151 @@
+
+.segmented-control {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.pricing-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.pricing-list > div {
+    border: 1px solid var(--main-orange);
+    padding: 30px 20px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.03) 0px 0px 15px 0px, rgba(0, 0, 0, 0.08) 0px 2px 30px 0px, rgba(0, 0, 0, 0.3) 0px 0px 1px 0px;
+    position: relative;
+}
+
+.pricing-list > div:nth-child(1) {
+    border: none;
+}
+
+.whale {
+    border: 2px solid var(--main-orange) !important;
+    overflow: visible !important;
+}
+
+.whale:before {
+    content: "Most Popular";
+    width: 101%;
+    height: 28px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: var(--main-orange);
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.pricing-list h2 {
+    font-size: 20px;
+}
+
+
+
+.price {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.price sup {
+    font-size: 20px;
+}
+
+.price sub {
+    font-weight: 400;
+    opacity: 0.5;
+    font-size: 14px;
+    position: relative;
+    top: -14px;
+}
+
+.billed {
+    height: 25px;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.watch-1-address {
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+
+.get-started-button {
+    border: 2px solid var(--main-orange);
+    margin-bottom: 20px;
+}
+
+.plan-includes {
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 8px;
+}
+
+.includes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.includes-list li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 10px;
+    line-height: 1;
+}
+
+.short {
+    grid-template-columns: 1fr 1fr;
+}
+
+/*.short div:first-child {*/
+/*    order: 1;*/
+/*}*/
+
+@media screen and (max-width: 800px) {
+    .pricing-list {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .pricing-list > div {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .pricing-list > div:nth-child(1) {
+        order: 1;
+    }
+
+    .pricing-list > div:nth-child(2) {
+        order: 1;
+    }
+
+    .pricing-list > div:nth-child(3) {
+        /*order: 0;*/
+    }
+
+    .watch-1-address {
+        margin: 5px 0;
+    }
+}

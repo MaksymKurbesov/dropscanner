@@ -1,0 +1,29 @@
+.terms-of-service-wrapper {
+    padding-top: 64px;
+}
+
+.terms-of-service {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 84px;
+}
+
+.terms-of-service h1 {
+    margin-bottom: 20px;
+}
+
+.terms-of-service h2 {
+    margin-bottom: 5px;
+}
+
+.terms-of-service p {
+    margin-bottom: 30px;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.terms-of-service p:last-child {
+    margin-bottom: 100px;
+}

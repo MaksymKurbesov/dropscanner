@@ -1,0 +1,77 @@
+.airdrops {
+    padding-top: 64px;
+    color: black;
+}
+
+.title {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 470px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-top: 40px;
+}
+
+.title span {
+    font-weight: 600;
+    color: var(--main-orange);
+}
+
+.subtitle {
+    margin-bottom: 70px;
+    width: 100%;
+    max-width: 550px;
+    opacity: 0.7;
+}
+
+.network-list {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 25px;
+    margin-bottom: 100px;
+}
+
+.network-list li p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.network-list li span {
+    opacity: 0.6;
+}
+
+.network-list li img {
+    border-radius: 50%;
+}
+
+.expiring-banner {
+    margin-bottom: 70px;
+}
+
+.accordion {
+    margin-bottom: 20px;
+}
+
+.read-more {
+    margin-bottom: 150px;
+}
+
+.read-more span {
+    font-weight: 600;
+    color: var(--main-orange);
+}
+
+@media screen and (max-width: 850px) {
+    .network-list {
+        grid-template-columns: repeat(2, 250px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .network-list {
+        grid-template-columns: repeat(1, 250px);
+    }
+}

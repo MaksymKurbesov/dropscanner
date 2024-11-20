@@ -1,0 +1,30 @@
+.statistic {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    gap: 10px;
+    flex-direction: column;
+    background: rgba(237, 240, 245, 0.7);
+    padding: 30px 15px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.statistic > div {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 25px 30px 1fr;
+    color: gray;
+}
+
+.statistic > div span {
+    color: black;
+    font-weight: 600;
+}
+
+.statistic > p {
+    color: gray;
+}

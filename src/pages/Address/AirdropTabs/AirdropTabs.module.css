@@ -1,0 +1,23 @@
+.tabs {
+    /*margin-bottom: 20px;*/
+    /*overflow: hidden;*/
+}
+
+.tabs-list {
+    margin-bottom: 45px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.tab {
+    color: var(--main-orange);
+}
+
+.count {
+    background: rgba(255, 148, 0, 0.51);
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 15px;
+    color: #be7000;
+}

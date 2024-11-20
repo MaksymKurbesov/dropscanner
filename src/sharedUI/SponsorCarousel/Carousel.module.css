@@ -1,0 +1,74 @@
+
+.controls {
+    transition: opacity 150ms ease;
+    opacity: 0;
+}
+
+.root {
+&:hover {
+.controls {
+    opacity: 1;
+}
+}
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    /*padding: 0 20px;*/
+    /*margin-right: 18px;*/
+    padding-inline-end: initial !important;
+}
+
+.slide-wrapper {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.name {
+    line-height: 1;
+}
+
+.text {
+    font-weight: 400;
+    margin-right: 30px;
+    text-align: center;
+    line-height: 1;
+}
+
+.slide > span  {
+    font-weight: 600;
+}
+
+.twitter-icon  {
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .slide-wrapper {
+        padding: 0 10px;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+
+    .twitter-icon {
+        margin-right: 10px;
+    }
+
+    .text {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+}

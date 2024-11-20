@@ -1,0 +1,80 @@
+.blue {
+    background: #cce0ff;
+    color: #09326c;
+}
+.blue button {
+    background-color: #b5c9e5;
+    color: #09326c;
+}
+
+.light-blue {
+    background: #9dd9ee;
+    color: #164555;
+}
+.light-blue button {
+    background-color: #a2cad9;
+    color: #164555;
+}
+
+.cyan {
+    background: #7ee2b8;
+    color: #164b35;
+}
+.cyan button {
+    background-color: #7ad5af;
+    color: #164b35;
+}
+
+.green {
+    background: #d3f1a7;
+    color: #37471f;
+}
+.green button {
+    background-color: #bfe08e;
+    color: #37471f;
+}
+
+.yellow {
+    background: #f5cd47;
+    color: #533f04;
+}
+.yellow button {
+    background-color: #daba52;
+    color: #533f04;
+}
+
+.orange {
+    background: #fea362;
+    color: #702e00;
+}
+.orange button {
+    background-color: #ea9b62;
+    color: #702e00;
+}
+
+.red {
+    background: #f87168;
+    color: #5d1f1a;
+}
+.red button {
+    background-color: #dc7068;
+    color: #5d1f1a;
+}
+
+.pink {
+    background: #f696d1;
+    color: #50253f;
+}
+.pink button {
+    background-color: #e38fc3;
+    color: #50253f;
+}
+
+.violet {
+    background: #9f8fef;
+    color: #352c63;
+}
+.violet button {
+    background-color: #9588d3;
+    color: #352c63;
+}

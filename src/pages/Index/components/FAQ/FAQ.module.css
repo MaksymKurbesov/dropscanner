@@ -1,0 +1,34 @@
+.FAQ {
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+}
+
+
+.subtitle {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.description {
+    font-weight: 400;
+}
+
+.accordion-list > span {
+    display: inline-block;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.accordion {
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 800px) {
+    .FAQ {
+        grid-template-columns: 1fr;
+        padding: 0;
+        padding-top: 30px;
+    }
+}

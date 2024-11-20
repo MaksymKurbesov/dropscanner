@@ -1,0 +1,41 @@
+.referrals {
+    display: flex;
+    flex-direction: column;
+}
+
+.invite-link-input, .revenue-input {
+    flex-grow: 1;
+}
+
+.invite-link-input input, .revenue-input input {
+    border-radius: 10px;
+    padding: 6px 13px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 148, 0, 0.15);
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    max-width: 350px;
+}
+
+
+.input-wrapper button, .revenue-input button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+}
+
+.input-wrapper button:active, .revenue-input button:active {
+    transform: translateY(-45%);
+}
+
+.invite-link-input, .revenue-input {
+    margin-bottom: 25px;
+}

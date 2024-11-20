@@ -1,0 +1,50 @@
+.step2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.found-text {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.found-text strong {
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.wallet-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+.wallet-wrapper span {
+    margin-right: 10px;
+    font-size: 14px;
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+.wallet-wrapper p {
+    background: rgba(140, 255, 0, 0.15);
+    padding: 3px 10px;
+}

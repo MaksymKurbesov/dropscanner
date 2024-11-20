@@ -1,0 +1,58 @@
+.pricing {
+    position: relative;
+    top: 10px;
+    background: rgba(248, 250, 252, 0.8);
+    padding-bottom: 200px;
+    padding: 70px 0;
+}
+
+.pricing h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: #2d2d2d;
+}
+
+.pricing h2 span {
+    color: var(--main-orange);
+    font-weight: 600;
+}
+
+.subtitle {
+    width: 100%;
+    max-width: 450px;
+    opacity: 0.7;
+    margin-bottom: 60px;
+}
+
+
+
+
+.cancel-plan {
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 800px) {
+    .pricing-list {
+        grid-template-columns: max-content;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .pricing-list > div {
+        max-width: 300px;
+    }
+
+    .pricing-list > div:nth-child(2) {
+        order: -1;
+    }
+
+    .pricing-list > div:nth-child(3) {
+        order: -1;
+    }
+
+    .watch-1-address {
+        margin: 5px 0;
+    }
+}
