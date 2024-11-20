@@ -298,27 +298,27 @@ const Address = () => {
                   <p className={styles["airdrop-name"]}>{airdrop.name}</p>
                   {airdrop.status}
                   {airdrop.price}
-                  <Anchor href={"/dashboard/overview"}>
-                    <Button
-                      color={"#FF9400"}
-                      size={"xs"}
-                      onClick={() => {
-                        if (user) {
-                          navigate("/dashboard/overview");
-                        } else {
-                          updateIsVisible();
-                        }
-                      }}
-                    >
-                      {windowSize.width <= 550 ? (
-                        "Claim"
-                      ) : (
-                        <>
-                          Claim safely <IconChevronRight size={16} />
-                        </>
-                      )}
-                    </Button>
-                  </Anchor>
+                  {/*<Anchor href={"/dashboard/overview"}>*/}
+                  <Button
+                    color={"#FF9400"}
+                    size={"xs"}
+                    onClick={() => {
+                      if (user) {
+                        navigate("/dashboard/overview");
+                      } else {
+                        updateIsVisible();
+                      }
+                    }}
+                  >
+                    {windowSize.width <= 550 ? (
+                      "Claim"
+                    ) : (
+                      <>
+                        Claim safely <IconChevronRight size={16} />
+                      </>
+                    )}
+                  </Button>
+                  {/*</Anchor>*/}
                 </li>
               );
             })}
