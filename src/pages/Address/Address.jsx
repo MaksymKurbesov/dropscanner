@@ -195,8 +195,8 @@ const Address = () => {
   const [
     getAirdropModalIsOpened,
     { open: openGetAirdropModal, close: closeGetAirdropModal },
-  ] = useDisclosure(true);
-  const [isOpenLoadOverlay, setIsOpenLoadOverlay] = useState(false);
+  ] = useDisclosure(false);
+  const [isOpenLoadOverlay, setIsOpenLoadOverlay] = useState(true);
   const { isVisible, updateIsVisible } = useSignInModal();
 
   useEffect(() => {
