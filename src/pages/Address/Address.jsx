@@ -40,9 +40,16 @@ import AptosImage from "../../assets/airdrops-network/aptos.png";
 import useWindowSize from "../../hooks/useWindowSize.js";
 import GetAirdropModal from "../../sharedUI/GetAirdropModal/GetAirdropModal.jsx";
 
+import MantraImage from "../../assets/airdrops-network/mantra.png";
+import SwellImage from "../../assets/airdrops-network/swell.png";
+import ZircuitImage from "../../assets/airdrops-network/zircuit.png";
+import MorphoImage from "../../assets/airdrops-network/morpho.png";
+import EthenaImage from "../../assets/airdrops-network/ethena.png";
+import LayerZeroImage from "../../assets/airdrops-network/layer_zero.png";
+
 export const AIRDROPS = [
   {
-    name: "Scroll",
+    name: "Mantra",
     status: (
       <p className={styles["airdrop-status"]}>
         <span>Available</span>
@@ -50,13 +57,15 @@ export const AIRDROPS = [
     ),
     price: (
       <p className={styles["airdrop-price"]}>
-        $221.3<span>0.0714 $ETH</span>
+        $221.3<span>60.32 $OM</span>
       </p>
     ),
-    icon: ScrollImage,
+    icon: MantraImage,
+    token: "$OM",
+    amount: "60.32 $OM",
   },
   {
-    name: "Solayer",
+    name: "Swell",
     status: (
       <p className={styles["airdrop-status"]}>
         <span>Available</span>
@@ -64,13 +73,15 @@ export const AIRDROPS = [
     ),
     price: (
       <p className={styles["airdrop-price"]}>
-        $137.5<span>0.5817 $SOL</span>
+        $137.5<span>4015.54 $SWELL</span>
       </p>
     ),
-    icon: SolayerImage,
+    icon: SwellImage,
+    token: "$SWELL",
+    amount: "4015.54 $SWELL",
   },
   {
-    name: "Farcaster",
+    name: "Zircuit",
     status: (
       <p className={styles["airdrop-status"]}>
         <span>Available</span>
@@ -78,13 +89,15 @@ export const AIRDROPS = [
     ),
     price: (
       <p className={styles["airdrop-price"]}>
-        $181.2<span>0.0582 $ETH</span>
+        $181.2<span>582.1 $ZRC</span>
       </p>
     ),
-    icon: FarcasterImage,
+    icon: ZircuitImage,
+    token: "$ZRC",
+    amount: "582.1 $ZRC",
   },
   {
-    name: "Base",
+    name: "Morpho",
     status: (
       <p className={styles["airdrop-status"]}>
         <span>Available</span>
@@ -92,13 +105,15 @@ export const AIRDROPS = [
     ),
     price: (
       <p className={styles["airdrop-price"]}>
-        $271.5<span>0.0872 $ETH</span>
+        $271.5<span>162979.45 $MORPHO</span>
       </p>
     ),
-    icon: BaseImage,
+    icon: MorphoImage,
+    token: "$MORPHO",
+    amount: "162979.45 $MORPHO",
   },
   {
-    name: "Nansen",
+    name: "Ethena",
     status: (
       <p className={styles["airdrop-status"]}>
         <span>Available</span>
@@ -106,13 +121,15 @@ export const AIRDROPS = [
     ),
     price: (
       <p className={styles["airdrop-price"]}>
-        $111.8<span>0.4633 $SOL</span>
+        $111.8<span>180.4 $ENA</span>
       </p>
     ),
-    icon: NansenImage,
+    icon: EthenaImage,
+    token: "$ENA",
+    amount: "180.4 $ENA",
   },
   {
-    name: "Phantom",
+    name: "Layer Zero",
     status: (
       <p className={styles["airdrop-status"]}>
         <span>Available</span>
@@ -120,67 +137,73 @@ export const AIRDROPS = [
     ),
     price: (
       <p className={styles["airdrop-price"]}>
-        $195.2<span>0.8139 $SOL</span>
+        $195.2<span>53.8 $ZRO</span>
       </p>
     ),
-    icon: PhantomImage,
+    icon: LayerZeroImage,
+    token: "$ZRO",
+    amount: "53.8 $ZRO",
   },
-  {
-    name: "Blast",
-    status: (
-      <p className={styles["airdrop-status"]}>
-        <span>Available</span>
-      </p>
-    ),
-    price: (
-      <p className={styles["airdrop-price"]}>
-        $95.3<span>0.0305 $ETH</span>
-      </p>
-    ),
-    icon: BlastImage,
-  },
-  {
-    name: "Layer3",
-    status: (
-      <p className={styles["airdrop-status"]}>
-        <span>Available</span>
-      </p>
-    ),
-    price: (
-      <p className={styles["airdrop-price"]}>
-        $291.7<span>662.0 MATIC</span>
-      </p>
-    ),
-    icon: Layer3Image,
-  },
-  {
-    name: "Zora",
-    status: (
-      <p className={styles["airdrop-status"]}>
-        <span>Available</span>
-      </p>
-    ),
-    price: (
-      <p className={styles["airdrop-price"]}>
-        $132.1<span>1500 ZOR</span>
-      </p>
-    ),
-    icon: ZoraImage,
-  },
-  {
-    name: "Aptos",
-    status: (
-      <p className={styles["airdrop-status"]}>
-        <span>Available</span>
-      </p>
-    ),
-    price: (
-      <p className={styles["airdrop-price"]}>
-        $151.4<span>12.73 APT</span>
-      </p>
-    ),
-    icon: AptosImage,
-  },
+  // {
+  //   name: "Blast",
+  //   status: (
+  //     <p className={styles["airdrop-status"]}>
+  //       <span>Available</span>
+  //     </p>
+  //   ),
+  //   price: (
+  //     <p className={styles["airdrop-price"]}>
+  //       $95.3<span>0.0305 $ETH</span>
+  //     </p>
+  //   ),
+  //   icon: BlastImage,
+  //   token: "ETH",
+  // },
+  // {
+  //   name: "Layer3",
+  //   status: (
+  //     <p className={styles["airdrop-status"]}>
+  //       <span>Available</span>
+  //     </p>
+  //   ),
+  //   price: (
+  //     <p className={styles["airdrop-price"]}>
+  //       $291.7<span>662.0 MATIC</span>
+  //     </p>
+  //   ),
+  //   icon: Layer3Image,
+  //   token: "ETH",
+  // },
+  // {
+  //   name: "Zora",
+  //   status: (
+  //     <p className={styles["airdrop-status"]}>
+  //       <span>Available</span>
+  //     </p>
+  //   ),
+  //   price: (
+  //     <p className={styles["airdrop-price"]}>
+  //       $132.1<span>1500 ZOR</span>
+  //     </p>
+  //   ),
+  //   icon: ZoraImage,
+  //   token: "ETH",
+  // },
+  // {
+  //   name: "Aptos",
+  //   status: (
+  //     <p className={styles["airdrop-status"]}>
+  //       <span>Available</span>
+  //     </p>
+  //   ),
+  //   price: (
+  //     <p className={styles["airdrop-price"]}>
+  //       $151.4<span>12.73 APT</span>
+  //     </p>
+  //   ),
+  //   icon: AptosImage,
+  //   token: "ETH",
+  // },
 ];
 
 const Address = () => {
@@ -191,6 +214,8 @@ const Address = () => {
   const [airdrops, setAirdrops] = useState([]);
   const windowSize = useWindowSize();
   const navigate = useNavigate();
+
+  const [clickedAirdrop, setClickedAirdrop] = useState();
 
   const [
     getAirdropModalIsOpened,
@@ -305,11 +330,7 @@ const Address = () => {
                     size={"xs"}
                     onClick={() => {
                       openGetAirdropModal();
-                      // if (user) {
-                      //   window.location.pathname = "/dashboard/overview";
-                      // } else {
-                      //   updateIsVisible();
-                      // }
+                      setClickedAirdrop(airdrop);
                     }}
                   >
                     {windowSize.width <= 550 ? (
@@ -324,50 +345,18 @@ const Address = () => {
               );
             })}
           </ul>
-          {/*<div className={styles["log-in-wrapper"]}>*/}
-          {/*  <LoadingOverlay*/}
-          {/*    visible={isOpenLoadOverlay}*/}
-          {/*    zIndex={1000}*/}
-          {/*    overlayProps={{ radius: "sm", blur: 2 }}*/}
-          {/*  />*/}
-          {/*  <span className={styles["icon"]}>*/}
-          {/*    <IconRadar2 size={50} color={"rgb(255,204,134)"} />*/}
-          {/*  </span>*/}
-          {/*  <p>Currently not eligible for Airdrops</p>*/}
-          {/*  <span className={styles["log-in-text"]}>*/}
-          {/*    {!user*/}
-          {/*      ? "Log in and save this address to be alerted for every future airdrops"*/}
-          {/*      : hasWallet*/}
-          {/*        ? "This address has been saved. You will see on this page if it becomes eligible for future Airdrops."*/}
-          {/*        : "Save this address to be alerted when it becomes eligible for future Airdrops"}*/}
-          {/*  </span>*/}
-          {/*  {!user && (*/}
-          {/*    <Button*/}
-          {/*      color={"#FF9400"}*/}
-          {/*      radius={"md"}*/}
-          {/*      leftSection={<IconBrandTelegram />}*/}
-          {/*      className={styles["log-in-button"]}*/}
-          {/*      onClick={() => updateIsVisible()}*/}
-          {/*    >*/}
-          {/*      Log in*/}
-          {/*    </Button>*/}
-          {/*  )}*/}
-
-          {/*  <NavLink to={"/"} className={styles["check-another-link"]}>*/}
-          {/*    <IconArrowNarrowLeft />*/}
-          {/*    Check another address*/}
-          {/*  </NavLink>*/}
-          {/*</div>*/}
         </AirdropTabs>
         <p className={styles["airdrop-missing"]}>
           Airdrop missing from here? Report missing airdrops to Drops Admin
         </p>
       </div>
+      <PricingModal opened={opened} close={close} />
       <GetAirdropModal
         close={closeGetAirdropModal}
         opened={getAirdropModalIsOpened}
+        airdrop={clickedAirdrop}
+        walletAddress={walletId}
       />
-      <PricingModal opened={opened} close={close} />
       <SponsorCarousel />
       <ScrollRestoration />
     </div>
