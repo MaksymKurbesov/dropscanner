@@ -1,8 +1,5 @@
 import styles from "./Address.module.css";
 import {
-  IconRadar2,
-  IconBrandTelegram,
-  IconArrowNarrowLeft,
   IconCheck,
   IconDotsVertical,
   IconChevronRight,
@@ -41,6 +38,7 @@ import Layer3Image from "../../assets/airdrops-network/layer3.png";
 import ZoraImage from "../../assets/airdrops-network/zora.png";
 import AptosImage from "../../assets/airdrops-network/aptos.png";
 import useWindowSize from "../../hooks/useWindowSize.js";
+import GetAirdropModal from "../../sharedUI/GetAirdropModal/GetAirdropModal.jsx";
 
 export const AIRDROPS = [
   {
@@ -194,7 +192,11 @@ const Address = () => {
   const windowSize = useWindowSize();
   const navigate = useNavigate();
 
-  const [isOpenLoadOverlay, setIsOpenLoadOverlay] = useState(true);
+  const [
+    getAirdropModalIsOpened,
+    { open: openGetAirdropModal, close: closeGetAirdropModal },
+  ] = useDisclosure(true);
+  const [isOpenLoadOverlay, setIsOpenLoadOverlay] = useState(false);
   const { isVisible, updateIsVisible } = useSignInModal();
 
   useEffect(() => {
@@ -302,12 +304,12 @@ const Address = () => {
                     color={"#FF9400"}
                     size={"xs"}
                     onClick={() => {
-                      if (user) {
-                        // navigate("/dashboard/overview", { replace: true });
-                        window.location.pathname = "/dashboard/overview";
-                      } else {
-                        updateIsVisible();
-                      }
+                      openGetAirdropModal();
+                      // if (user) {
+                      //   window.location.pathname = "/dashboard/overview";
+                      // } else {
+                      //   updateIsVisible();
+                      // }
                     }}
                   >
                     {windowSize.width <= 550 ? (
@@ -361,6 +363,10 @@ const Address = () => {
           Airdrop missing from here? Report missing airdrops to Drops Admin
         </p>
       </div>
+      <GetAirdropModal
+        close={closeGetAirdropModal}
+        opened={getAirdropModalIsOpened}
+      />
       <PricingModal opened={opened} close={close} />
       <SponsorCarousel />
       <ScrollRestoration />

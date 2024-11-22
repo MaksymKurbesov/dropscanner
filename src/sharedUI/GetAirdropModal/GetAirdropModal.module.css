@@ -1,0 +1,59 @@
+.title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.image {
+    margin-bottom: 25px;
+    border-radius: 20px;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 1.2;
+    opacity: 0.5;
+    margin-bottom: 15px;
+}
+
+.claim-details {
+    /*background: rgba(255, 183, 0, 0.54);*/
+    /*padding: 17px;*/
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.claim-details h2, .safety h2, .steps-title  {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    opacity: 0.85;
+    margin-bottom: 5px;
+}
+
+.claim-details p {
+    line-height: 1.8;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.steps-list {
+    margin-bottom: 25px;
+    opacity: 0.5;
+}
+
+.steps-list li {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.safety {
+    background: rgb(254, 252, 232);
+    padding: 17px;
+    border-radius: 15px;
+    color: rgb(202, 138, 4);
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
