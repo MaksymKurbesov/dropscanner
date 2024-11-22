@@ -62,7 +62,9 @@ const AddressesList = ({ addresses }) => {
                   variant={"light"}
                   color={"#FF9400"}
                   className={styles["view-button"]}
-                  onClick={() => navigate(`/address/${addresses}`)}
+                  onClick={() =>
+                    (window.location.href = `/address/${addresses}`)
+                  }
                 >
                   View
                 </Button>
